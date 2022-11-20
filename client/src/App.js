@@ -20,7 +20,7 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
-const server = 'http://localhost:8080';
+const server = 'https://herokuvmc.herokuapp.com:8080';
 const connectionOptions = {
   'force new connection': true,
   reconnectionAttempts: 'Infinity',
