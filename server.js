@@ -25,7 +25,9 @@ let roomIdGlobal, imgURLGlobal;
 let userMap = new Map();
 let shareMap = new Map();
 io.on('connection', (socket) => {
+  console.log('socket connected')
   socket.on('userJoined', (data) => {
+    console.log('User joined')
     const { name, userId, roomId, host, presenter, hostId, isGroup, groupMembers} = data;
     roomIdGlobal = roomId;
     socket.join(roomId);
