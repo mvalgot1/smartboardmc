@@ -20,6 +20,7 @@ import store from './store';
 import { loadUser } from './actions/auth';
 import setAuthToken from './utils/setAuthToken';
 
+const socketUrl = "/"
 const server = 'https://herokuvmc.herokuapp.com:8080';
 const connectionOptions = {
   'force new connection': true,
@@ -28,7 +29,9 @@ const connectionOptions = {
   transports: ['websocket']
 };
 
-const socket = io(server, connectionOptions);
+// const socket = io(server, connectionOptions);
+
+const socket = io(socketUrl);
 
 const App = () => {
   const [user, setUser] = useState(null);

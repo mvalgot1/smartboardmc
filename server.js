@@ -189,10 +189,10 @@ if (process.env.NODE_ENV === 'production') {
   });
 }
 
-// const PORT = process.env.PORT || 5000;
-const PORT = 8080;
+const PORT = process.env.PORT || 5000;
+// const PORT = 8080;
 
-app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
-server.listen(8080, () => {
-  console.log('Started on : 8080');
+// app.listen(PORT, () => console.log(`Server started on port ${PORT}`));
+server.listen(PORT, () => {
+  console.log(`Started on : ${PORT}`);
 });
